@@ -93,7 +93,7 @@ namespace LuaInterface
 		[DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
 		public static extern void luaS_openextlibs(IntPtr L);
 
-//		#region 3rd
+		#region 3rd
 //		//pdc
 //		[DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
 //		[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
@@ -109,15 +109,15 @@ namespace LuaInterface
 //		[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 //		public static extern int luaopen_cjson(IntPtr luaState);
 //		
-//		//lua socket
-//		[DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
-//		[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-//		public static extern int luaopen_socket_core(IntPtr luaState);
-//		
-//		//lua socket mime
-//		[DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
-//		[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-//		public static extern int luaopen_mime_core(IntPtr luaState);
+		//lua socket
+		[DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
+		[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+		public static extern int luaopen_socket_core(IntPtr luaState);
+		
+		//lua socket mime
+		[DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
+		[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+		public static extern int luaopen_mime_core(IntPtr luaState);
 //		
 //		//sproto
 //		[DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
@@ -129,7 +129,7 @@ namespace LuaInterface
 //		[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 //		public static extern int luaopen_lsqlite3(IntPtr luaState);
 //
-//		#endregion
+		#endregion
 
 		// Thread Funcs
 		[DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]

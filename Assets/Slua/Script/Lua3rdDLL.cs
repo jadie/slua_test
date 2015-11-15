@@ -7,7 +7,7 @@ public static class Lua3rdDLL{
 	static Dictionary<string, LuaCSFunction> DLLRegFuncs = new Dictionary<string, LuaCSFunction>();
 	
 	static Lua3rdDLL(){
-//		LuasocketLib.Reg(DLLRegFuncs);
+		LuasocketLib.Reg(DLLRegFuncs);
 //		CjsonLib.Reg(DLLRegFuncs);
 //		PbcLib.Reg(DLLRegFuncs);
 //		SprotoLib.Reg(DLLRegFuncs);

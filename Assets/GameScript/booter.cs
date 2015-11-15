@@ -8,7 +8,7 @@ public class booter : MonoBehaviour {
 	void Start () {
 		SLua.LuaState.loaderDelegate = Loader;
 		lua = new SLua.LuaSvr();
-		lua.init(tick,complete,false);
+		lua.init(tick,complete,true);
 	}
 	
 	// Update is called once per frame
@@ -28,6 +28,10 @@ public class booter : MonoBehaviour {
 	byte[] Loader(string fn)
 	{
 		string filepath = "Assets/LuaScript/"+fn+".lua";
+		if(!System.IO.File.Exists(filepath))
+		{
+			return null;
+		}
 		using(System.IO.FileStream fs = new System.IO.FileStream(filepath, System.IO.FileMode.Open))
 		{
 			using(System.IO.BinaryReader br = new System.IO.BinaryReader(fs))
