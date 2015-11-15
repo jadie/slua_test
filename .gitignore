@@ -1,1 +1,5 @@
 Library/
+Temp/
+*.csproj
+LuaTest.sln
+LuaTest.userprefs
